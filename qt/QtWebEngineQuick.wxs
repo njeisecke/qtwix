@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
+    <Fragment>
+        <!-- APPLICATIONFOLDER/qml -->
+        <DirectoryRef Id="dirF8AAB67AB3E544FABDA0079E5CF0EBD6">
+            <Directory Id="dirCB9BF89EA15E4202B0E74E393D197EB3" Name="QtWebEngine" />
+        </DirectoryRef>
+    </Fragment>
+    <Fragment>
+        <ComponentGroup Id="CMP_QtWebEngineQuick">
+            <Component Id="cmpA367D2022EBD44DF9282F4CE4978A172" Directory="APPLICATIONFOLDER" Guid="{0C0FF0E5-673D-48DA-8A1E-59288E9F4DF7}">
+                <File Id="filAB0B28EC9B9344A9A541F625EADBE363" KeyPath="yes" Source="$(var.sourceDir)\Qt6WebEngineQuick.dll" />
+            </Component>
+            <Component Id="cmpDB9B740C7C1945E98277F41CCA0AA984" Directory="dirCB9BF89EA15E4202B0E74E393D197EB3" Guid="{9CE06D6B-57D3-4785-A614-CD4134A293F7}">
+                <File Id="filDB0523A1F0C24A19832D6C102A0C5941" KeyPath="yes" Source="$(var.sourceDir)\qml\QtWebEngine\qmldir" />
+            </Component>
+            <Component Id="cmp83416DEDD292467EB1F07645BFD54C2C" Directory="dirCB9BF89EA15E4202B0E74E393D197EB3" Guid="{AB5CCC50-A166-4AC4-BD0B-7995A8C90B33}">
+                <File Id="fil6D5B46AAF1A1447796C404BE0BD62672" KeyPath="yes" Source="$(var.sourceDir)\qml\QtWebEngine\qtwebenginequickplugin.dll" />
+            </Component>
+        </ComponentGroup>
+
+        <!-- Depends on QtWebChannelQuick -->
+    </Fragment>
+</Wix>

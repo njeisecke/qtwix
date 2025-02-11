@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
+    <Fragment>
+        <ComponentGroup Id="CMP_QtWebChannel">
+            <Component Id="cmpDFF254869EF744BF8DF9C59AE46757CE" Directory="APPLICATIONFOLDER" Guid="{6C3EBBD7-CFF9-4976-90FF-A9C9CCBBA696}">
+                <File Id="fil8B5F4C574313458D9D168757FCC0F33D" KeyPath="yes" Source="$(var.sourceDir)\Qt6WebChannel.dll" />
+            </Component>
+        </ComponentGroup>
+    </Fragment>
+</Wix>

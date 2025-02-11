@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
+    <Fragment>
+        <ComponentGroup Id="CMP_QtPrintSupport">
+            <Component Id="cmpFF87A84D7126C0B79CD1D89B8D87465B" Directory="APPLICATIONFOLDER" Guid="{56E73D54-48E2-4C93-B43B-11D4AB885F71}">
+                <File Id="fil66842ADDD43FC209E4426A33AC352090" KeyPath="yes" Source="$(var.sourceDir)\Qt6PrintSupport.dll" />
+            </Component>
+        </ComponentGroup>
+    </Fragment>
+</Wix>

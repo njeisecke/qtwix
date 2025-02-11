@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
+    <Fragment>
+        <DirectoryRef Id="APPLICATIONFOLDER">
+            <Directory Id="dirC46B5AA33B1733B9F3A6F2138EFA7E8F" Name="styles" />
+        </DirectoryRef>
+    </Fragment>
+
+    <Fragment>
+        <ComponentGroup Id="CMP_QtWidgets">
+            <!-- QtWidgets -->
+            <Component Id="cmp56293D9BF3C9C0958CC76CF46718807F" Directory="APPLICATIONFOLDER" Guid="{FC720BC6-B2CF-4FFE-B818-1848B701A8CE}">
+                <File Id="fil65804E516B803A8307147E97632036F9" KeyPath="yes" Source="$(var.sourceDir)\Qt6Widgets.dll" />
+            </Component>
+
+            <!-- Widget Styles -->
+            <Component Id="cmped21c79e0b854faf87ce7365fa86ebc7" Directory="dirC46B5AA33B1733B9F3A6F2138EFA7E8F" Guid="{5d4d7043-ff0f-4283-8812-e9cf6ca97bb8}">
+                <File Id="filc6e7299c7c534628851ad1e2093361b3" KeyPath="yes" Source="$(var.sourceDir)\styles\qmodernwindowsstyle.dll" />
+            </Component>
+
+        </ComponentGroup>
+    </Fragment>
+</Wix>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
+    <Fragment>
+        <ComponentGroup Id="CMP_QtCore">
+            <Component Id="cmp59018B25CCAEF84F825904822229D23C" Directory="APPLICATIONFOLDER" Guid="{6B300315-3857-44F7-98D2-09622BEC7E4D}">
+                <File Id="filF702E7138A0920F0345592B9FCA69E6E" KeyPath="yes" Source="$(var.sourceDir)\Qt6Core.dll" />
+            </Component>
+        </ComponentGroup>
+    </Fragment>
+</Wix>

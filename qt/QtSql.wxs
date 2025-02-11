@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
+    <Fragment>
+        <DirectoryRef Id="APPLICATIONFOLDER">
+            <Directory Id="dir59E3E3078D0FECC2FF8EDE08ABECD4E4" Name="sqldrivers" />
+        </DirectoryRef>
+    </Fragment>
+    <Fragment>
+        <ComponentGroup Id="CMP_QtSql">
+
+            <Component Id="cmpEDA4D8B40F66667428B67B4B47E384BD" Directory="APPLICATIONFOLDER" Guid="{58BF2AF9-32E5-4027-B8A8-2157D146C6A1}">
+                <File Id="fil9DCD2EB73BFA675B92EDC1D1FB54BAE1" KeyPath="yes" Source="$(var.sourceDir)\Qt6Sql.dll" />
+            </Component>
+
+            <Component Id="cmpBA79A4BC216C5492849DF7ED5C5E8F39" Directory="dir59E3E3078D0FECC2FF8EDE08ABECD4E4" Guid="{4EB4C8D2-EFE2-48A6-8210-8EBD4C61461E}">
+                <File Id="fil44CBBB3FC021D56094437DA3935B23EE" KeyPath="yes" Source="$(var.sourceDir)\sqldrivers\qsqlodbc.dll" />
+            </Component>
+
+        </ComponentGroup>
+    </Fragment>
+</Wix>

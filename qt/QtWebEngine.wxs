@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
+    <Fragment>
+        <DirectoryRef Id="APPLICATIONFOLDER">
+            <Directory Id="dir41B83532B622451FB46E1731E615FD85" Name="resources" />
+        </DirectoryRef>
+    </Fragment>
+    <Fragment>
+        <ComponentGroup Id="CMP_QtWebEngine">
+
+            <!-- WebEngine Core -->
+            <Component Id="cmp73F00B3288EB483C8F017F974A95674F" Directory="APPLICATIONFOLDER" Guid="{EB20AF32-FE22-4A24-B4EA-E0724F837ED6}">
+                <File Id="fil426C388152074188AFED9462573E583D" KeyPath="yes" Source="$(var.sourceDir)\Qt6WebEngineCore.dll" />
+            </Component>
+            <Component Id="cmp3159D0B983F74C8F856087888516D130" Directory="APPLICATIONFOLDER" Guid="{A4D5055C-1A51-4BB0-A868-D51344D5BCC9}">
+                <File Id="fil2E8FAD0BDFE645DEBDC6B41CB7736CCD" KeyPath="yes" Source="$(var.sourceDir)\QtWebEngineProcess.exe" />
+            </Component>
+
+            <!-- Chromium Runtime stuff -->
+            <Component Id="cmpaddfaf93750f40f9b83d8c16e9314e8b" Directory="dir41B83532B622451FB46E1731E615FD85" Guid="{e794124d-6346-4628-a3b5-b0a45213a293}">
+                <File Id="filbc0abe235e424befa4ed7d883b812f19" KeyPath="yes" Source="$(var.sourceDir)\resources\v8_context_snapshot.bin" />
+            </Component>
+            <Component Id="cmp484B9AE29CE84A7BAE4B3E33135D5B6A" Directory="dir41B83532B622451FB46E1731E615FD85" Guid="{84FCDEEF-0DB1-42F7-8C12-35C3CF7D87AC}">
+                <File Id="fil67BDF70A72EC47DA88551244872C4921" KeyPath="yes" Source="$(var.sourceDir)\resources\qtwebengine_resources_200p.pak" />
+            </Component>
+            <Component Id="cmpBCB47EC96DD14DEEBEEF3E1E64B98598" Directory="dir41B83532B622451FB46E1731E615FD85" Guid="{D094CD00-71F2-48E8-991A-3E8EEA83FAC3}">
+                <File Id="fil6E5C7DB097A845ECA99A2294428A453D" KeyPath="yes" Source="$(var.sourceDir)\resources\qtwebengine_resources_100p.pak" />
+            </Component>
+            <Component Id="cmp4E109042E24B4396A63A97C9C930DE09" Directory="dir41B83532B622451FB46E1731E615FD85" Guid="{E5847813-F551-40EE-9517-5670C3562851}">
+                <File Id="filDAA3AEF2AF874BBE8D32CBA7D159CC40" KeyPath="yes" Source="$(var.sourceDir)\resources\qtwebengine_resources.pak" />
+            </Component>
+            <Component Id="cmp06AE143BCC3148F6AADB89873ADC0627" Directory="dir41B83532B622451FB46E1731E615FD85" Guid="{BFB511EF-8DCB-49A1-93AF-D3FDE4918A16}">
+                <File Id="fil28B7AB5F5A3247FDA24FBC691C57B195" KeyPath="yes" Source="$(var.sourceDir)\resources\icudtl.dat" />
+            </Component>
+
+            <!-- Depends on QtWebChannel -->
+            <!-- Depends on QtPositioning -->
+
+        </ComponentGroup>
+    </Fragment>
+</Wix>

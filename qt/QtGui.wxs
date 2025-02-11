@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
+    <Fragment>
+        <DirectoryRef Id="APPLICATIONFOLDER">
+            <Directory Id="dir68886FC6E795E3B2B05F3FF4050857C8" Name="platforms" />
+            <Directory Id="dir0FDF925E77C53A61CED809EF64CFB5C0" Name="imageformats" />
+        </DirectoryRef>
+    </Fragment>
+
+    <Fragment>
+        <ComponentGroup Id="CMP_QtGui">
+            <Component Id="cmp6BFE2A29988F8570F2EBD2D115881B1C" Directory="APPLICATIONFOLDER" Guid="{9CE632AB-A016-417A-8E51-832770E8AF7D}">
+                <File Id="fil9EFCA7E84A1A0D5D7282E8B907EE090D" KeyPath="yes" Source="$(var.sourceDir)\Qt6Gui.dll" />
+            </Component>
+
+            <!-- platform -->
+            <Component Id="cmp017F00702C671AFB1392268E03D4FC65" Directory="dir68886FC6E795E3B2B05F3FF4050857C8" Guid="{482BE1D0-6DA0-4611-B9BD-A923D63047AD}">
+                <File Id="fil11B880C62C6FE747BC6FCBBE8F63579A" KeyPath="yes" Source="$(var.sourceDir)\platforms\qwindows.dll" />
+            </Component>
+
+            <!-- imageformats -->
+            <Component Id="cmpDE9D3EA6142D46D0AE680E96D5CFC01F" Directory="dir0FDF925E77C53A61CED809EF64CFB5C0" Guid="{2E30CA03-866E-4333-8247-D1579FADE8A0}">
+                <File Id="fil08510737EBC400A3C2821DAA462DCA95" KeyPath="yes" Source="$(var.sourceDir)\imageformats\qgif.dll" />
+            </Component>
+            <Component Id="cmp3663488B0DC201F1578C10CDD6C53603" Directory="dir0FDF925E77C53A61CED809EF64CFB5C0" Guid="{3F3130FA-213D-4F5F-8894-0DA573CE132A}">
+                <File Id="fil41C2CECF91A4B77D7CC9C84CAD705F61" KeyPath="yes" Source="$(var.sourceDir)\imageformats\qjpeg.dll" />
+            </Component>
+
+            <!-- Depends on QtCore -->
+
+        </ComponentGroup>
+    </Fragment>
+</Wix>

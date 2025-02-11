@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
+    <Fragment>
+        <DirectoryRef Id="APPLICATIONFOLDER">
+            <Directory Id="dirDA1287EF18298l8FF888DEAD6E77198F" Name="tls" />
+        </DirectoryRef>
+    </Fragment>
+    <Fragment>
+        <ComponentGroup Id="CMP_QtNetwork">
+
+            <Component Id="cmp5E4F2A3C52FA321FD438E945EFEDD470" Directory="APPLICATIONFOLDER" Guid="{26EE85EA-E7EE-4F8B-A3B8-F4CDB02BBBDC}">
+                <File Id="fil2856FC368078AF6867469D9DB96D9881" KeyPath="yes" Source="$(var.sourceDir)\Qt6Network.dll" />
+            </Component>
+            <Component Id="cmpa72a26393578483688db4624473cbdcf" Directory="APPLICATIONFOLDER" Guid="{9f661da9-cac5-4109-9921-9fd0993f0d54}">
+                <File Id="fil245bf010c5334afaaacbb3ee0a54db32" KeyPath="yes" Source="$(var.sourceDir)\Qt6NetworkAuth.dll" />
+            </Component>
+            <Component Id="cmp6E4A5A4C52FA321FD438E945EEEA1F81" Directory="APPLICATIONFOLDER" Guid="{4F738A75-779A-4509-8C91-E179DF22CA38}">
+                <File Id="fi12899351934F28829A282B98982982A18" KeyPath="yes" Source="$(var.sourceDir)\Qt6WebSockets.dll" />
+            </Component>
+            <Component Id="cmpff7c3ae205b34739b865426297afe2ca" Directory="dirDA1287EF18298l8FF888DEAD6E77198F" Guid="{DD510E00-FFB3-47A2-9FDC-3A9C37AC0C4B}">
+                <File Id="filA3C61ACD37C546E7AAC6C21A3954E364" KeyPath="yes" Source="$(var.sourceDir)\tls\qschannelbackend.dll" />
+            </Component>
+
+        </ComponentGroup>
+    </Fragment>
+</Wix>

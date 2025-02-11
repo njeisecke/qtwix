@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
+    <Fragment>
+        <ComponentGroup Id="CMP_QtTranslation_it">
+            <Component Id="cmp5BF724D3A42CA00327E3458668D56D77" Directory="APPLICATIONFOLDER" Guid="{7FFD65A2-A1B3-42E8-901B-C9D55A771092}">
+                <File Id="fil1AE677C66BA257C580E921D6BFB04ECA" KeyPath="yes" Source="$(var.sourceDir)\translations\qt_it.qm" />
+            </Component>
+        </ComponentGroup>
+    </Fragment>
+</Wix>

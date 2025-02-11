@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
+    <Fragment>
+        <DirectoryRef Id="APPLICATIONFOLDER">
+            <Directory Id="dir3C9909798D66401AA6F704B81858F9F0" Name="multimedia" />
+        </DirectoryRef>
+    </Fragment>
+    <Fragment>
+        <ComponentGroup Id="CMP_QtMultimedia">
+
+            <Component Id="cmp99B1ABBE80ED369162B94B6BDC9D3740" Directory="APPLICATIONFOLDER" Guid="{D3813961-C1D5-45CD-A80A-0669983DCDDC}">
+                <File Id="filFFFE22E54F23CA0C338D9821E5BB2CE9" KeyPath="yes" Source="$(var.sourceDir)\Qt6Multimedia.dll" />
+            </Component>
+
+            <!-- Windows Backend (deprecated) -->
+            <Component Id="cmp5363510197f74b539ffe025b6833bd8f" Directory="dir3C9909798D66401AA6F704B81858F9F0" Guid="{1d5088e5-76cd-465d-9917-718bd7bb95b3}">
+                <File Id="filb79abbb122784492b45cc55ea345fa8f" KeyPath="yes" Source="$(var.sourceDir)\multimedia\windowsmediaplugin.dll" />
+            </Component>
+
+            <!-- Backend: ffmpeg -->
+            <Component Id="cmp1ae2156e323b48f98bc036cabaa34810" Directory="dir3C9909798D66401AA6F704B81858F9F0" Guid="{58285f0d-9ac7-4c20-9bc8-b9413b3ceeb0}">
+                <File Id="fil6d0210255de6486ca7b91e985dd6c292" KeyPath="yes" Source="$(var.sourceDir)\multimedia\ffmpegmediaplugin.dll" />
+            </Component>
+
+            <!-- ffmpeg codecs etc. -->
+            <Component Id="cmpc29dc2c9324148169651bb0ec56592b6" Directory="APPLICATIONFOLDER" Guid="{6aa8bca3-1e6c-46e4-99b6-16b79242d4ca}">
+                <File Id="filf1fd3c99a56144c4b8b8596866661b87" KeyPath="yes" Source="$(var.sourceDir)\swresample-5.dll" />
+            </Component>
+            <Component Id="cmpc3910197a545942a1a689773e097bac78" Directory="APPLICATIONFOLDER" Guid="{76799252-ca0c-4858-8a34-3645fb548b2a}">
+                <File Id="fil18abec203ce54147a37acbeb6a746c06" KeyPath="yes" Source="$(var.sourceDir)\swscale-8.dll" />
+            </Component>
+            <Component Id="cmp627d60a7164a4025be9cbcc498a002da" Directory="APPLICATIONFOLDER" Guid="{5b3fb891-c5f1-4359-9415-08a8f825ba65}">
+                <File Id="file01a88b8beeb43f7bb3161edea254165" KeyPath="yes" Source="$(var.sourceDir)\avcodec-61.dll" />
+            </Component>
+            <Component Id="cmp49e0dbe0d3374f51b509342869bb5dc3" Directory="APPLICATIONFOLDER" Guid="{c7b98391-3e9c-468e-b862-6d9b4304687e}">
+                <File Id="fil275eafe88fff4775a5c5119b1ec49358" KeyPath="yes" Source="$(var.sourceDir)\avformat-61.dll" />
+            </Component>
+            <Component Id="cmpe914002775814b26a8e0cb32ef7b14bd" Directory="APPLICATIONFOLDER" Guid="{d13564cb-9e3d-4d1c-aa37-3f3068d27a9f}">
+                <File Id="fil1cb2fbcca53143beb6f6c2c65634ff05" KeyPath="yes" Source="$(var.sourceDir)\avutil-59.dll" />
+            </Component>
+
+        </ComponentGroup>
+    </Fragment>
+</Wix>

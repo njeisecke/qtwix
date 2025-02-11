@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
+    <Fragment>
+        <!-- APPLICATIONFOLDER/qml -->
+        <DirectoryRef Id="dirF8AAB67AB3E544FABDA0079E5CF0EBD6">
+            <Directory Id="dir7784cf891d7c465495a6e32c2c35aff6" Name="QtWebChannel" />
+        </DirectoryRef>
+    </Fragment>
+    <Fragment>
+        <ComponentGroup Id="CMP_QtWebChannelQuick">
+            <Component Id="cmpc8c5e9bd0f21487c86220978145c0d2f" Directory="APPLICATIONFOLDER" Guid="{ffdb5b75-8e64-44d0-a7e6-603301e3aa17}">
+                <File Id="fil85602ff43c9f4b198a290e8af2c44a80" KeyPath="yes" Source="$(var.sourceDir)\Qt6WebChannelQuick.dll" />
+            </Component>
+            <Component Id="cmpcac1e7c1ffa74b0aa54f43c17ad20655" Directory="dir7784cf891d7c465495a6e32c2c35aff6" Guid="{90e1201e-24ca-47e3-a040-e527523915ec}">
+                <File Id="fil8382f58d65e249bd9befbaebd997a1f8" KeyPath="yes" Source="$(var.sourceDir)\qml\QtWebChannel\webchannelquickplugin.dll" />
+            </Component>
+            <Component Id="cmp77ac5a842352497cb85d8ca7cf66873c" Directory="dir7784cf891d7c465495a6e32c2c35aff6" Guid="{c5d08863-8115-4534-988e-3bdf7ed3e98d}">
+                <File Id="filb822de6a86ef44058868e63ad6cbca1f" KeyPath="yes" Source="$(var.sourceDir)\qml\QtWebChannel\qmldir" />
+            </Component>
+        </ComponentGroup>
+    </Fragment>
+</Wix>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
+    <Fragment>
+        <!-- APPLICATIONFOLDER/qml -->
+        <DirectoryRef Id="dirF8AAB67AB3E544FABDA0079E5CF0EBD6"> <!-- qml -->
+            <Directory Id="dir1FB8A482A72EEFCFD982D1965B360D80" Name="QtMultimedia" />
+        </DirectoryRef>
+    </Fragment>
+    <Fragment>
+        <ComponentGroup Id="CMP_QtMultimediaQuick">
+
+            <Component Id="cmpE4E6D10C53DD7C3E311BEC39C23C17B2" Directory="APPLICATIONFOLDER" Guid="{04ABFDEA-1D19-4BFA-97E5-C1FABF13D64A}">
+                <File Id="fil43C3AD9683545AC7CE6D42F8518CFAB0" KeyPath="yes" Source="$(var.sourceDir)\Qt6MultimediaQuick.dll" />
+            </Component>
+            <Component Id="cmp811EC779ED8EF85820A2043C6D16503B" Directory="dir1FB8A482A72EEFCFD982D1965B360D80" Guid="{DA7D35C1-A501-4AC2-AE69-39DED565410B}">
+                <File Id="filCD1AFECB6E7EE8D2A8EEB614F87CAC78" KeyPath="yes" Source="$(var.sourceDir)\qml\QtMultimedia\quickmultimediaplugin.dll" />
+            </Component>
+            <Component Id="cmp30048EDD79BCCB3004AEF84F1C6DD5B6" Directory="dir1FB8A482A72EEFCFD982D1965B360D80" Guid="{349E1D78-A285-401A-BDB3-043A8C65EF1A}">
+                <File Id="fil6860BF1308812632246760DEF6BE52BD" KeyPath="yes" Source="$(var.sourceDir)\qml\QtMultimedia\qmldir" />
+            </Component>
+
+        </ComponentGroup>
+    </Fragment>
+</Wix>

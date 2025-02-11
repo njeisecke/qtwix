@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
+    <Fragment>
+        <ComponentGroup Id="CMP_QtPositioning">
+            <Component Id="cmp7ADEFA9A79564F0AB61520DC2C0C7C7F" Directory="APPLICATIONFOLDER" Guid="{F58C8970-C9A1-4FEE-B9E1-DCA213B68126}">
+                <File Id="fil7370F126E436460591FE04C92A17CE86" KeyPath="yes" Source="$(var.sourceDir)\Qt6Positioning.dll" />
+            </Component>
+        </ComponentGroup>
+    </Fragment>
+</Wix>
