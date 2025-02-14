@@ -26,7 +26,9 @@ Add `ComponentGroupRef` entries for the required modules:
       <ComponentGroupRef Id="CMP_QtQuick" />
       <ComponentGroupRef Id="CMP_QtQuickWidget" />
       <ComponentGroupRef Id="CMP_QtNetwork" />
+      <ComponentGroupRef Id="CMP_QtNetworkAuth" />
       <ComponentGroupRef Id="CMP_QtSql" />
+      <ComponentGroupRef Id="CMP_QtWebSockets" />
       <ComponentGroupRef Id="CMP_QtWebEngine" />
       <ComponentGroupRef Id="CMP_QtWebEngineQuick" />
       <ComponentGroupRef Id="CMP_QtWebChannel" />
