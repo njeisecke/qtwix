@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
+    <Fragment>
+        <ComponentGroup Id="CMP_QtQuickWidget">
+            <Component Id="cmpef4c181a9716409e9dea618f0b0a1df8" Directory="APPLICATIONFOLDER" Guid="{C4338152-C68F-45FA-96A4-6C7C2D8D901F}">
+                <File Id="fil770F62FAEF7448E4B809883F7586D2C3" KeyPath="yes" Source="$(var.sourceDir)\Qt6QuickWidgets.dll" />
+            </Component>
+        </ComponentGroup>
+    </Fragment>
+</Wix>

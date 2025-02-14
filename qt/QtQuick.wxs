@@ -52,9 +52,6 @@
             <Component Id="cmp69ddf494a7894647800bb651a6860f87" Directory="APPLICATIONFOLDER" Guid="{30d33136-0c8c-4cf6-8c94-78eb25b8935f}">
                 <File Id="fil53be4a7ab3374dcb8180163ba8423a48" KeyPath="yes" Source="$(var.sourceDir)\opengl32sw.dll" />
             </Component>
-            <Component Id="cmpef4c181a9716409e9dea618f0b0a1df8" Directory="APPLICATIONFOLDER" Guid="{C4338152-C68F-45FA-96A4-6C7C2D8D901F}">
-                <File Id="fil770F62FAEF7448E4B809883F7586D2C3" KeyPath="yes" Source="$(var.sourceDir)\Qt6QuickWidgets.dll" />
-            </Component>
             <Component Id="cmp5BF9D1345C7D33B31400744F901C1CD4" Directory="APPLICATIONFOLDER" Guid="{5E9F2186-8D6C-4F18-9DC2-4C358F43A2EB}">
                 <File Id="filB483FFE7EE9B698FA1E4EDF8C4E6819D" KeyPath="yes" Source="$(var.sourceDir)\Qt6Qml.dll" />
             </Component>
