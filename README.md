@@ -25,6 +25,7 @@ Add `ComponentGroupRef` entries for the required modules:
       <ComponentGroupRef Id="CMP_QtPrintSupport" />
       <ComponentGroupRef Id="CMP_QtQuick" />
       <ComponentGroupRef Id="CMP_QtQuickWidget" />
+      <ComponentGroupRef Id="CMP_QtQuickLabsPlatform" />
       <ComponentGroupRef Id="CMP_QtNetwork" />
       <ComponentGroupRef Id="CMP_QtNetworkAuth" />
       <ComponentGroupRef Id="CMP_QtSql" />

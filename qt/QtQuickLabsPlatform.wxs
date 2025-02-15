@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
+    <Fragment>
+        <DirectoryRef Id="dirF8AAB67AB3E544FABDA0079E5CF0EBD6"> <!-- qml -->
+            <Directory Id="dira4035ec437154bc0a3d15e1607801441" Name="Qt">
+                <Directory Id="dirfb3e0947d3eb4b28bc06cf3dbea81006" Name="labs">
+                    <Directory Id="dir78d34247a65048b9985c61c52b22d4cd" Name="platform" />
+                </Directory>
+            </Directory>
+        </DirectoryRef>
+    </Fragment>
+
+    <Fragment>
+        <ComponentGroup Id="CMP_QtQuickLabsPlatform">
+            <Component Id="cmpf100d729e2e247988765b3871402ddb9" Directory="dir78d34247a65048b9985c61c52b22d4cd" Guid="{9e930954-7c02-4f4b-b478-f9c977de11b8}">
+                <File Id="fil6aa29e921c894763bce225b9031238f3" KeyPath="yes" Source="$(var.sourceDir)\qml\Qt\labs\platform\qmldir" />
+            </Component>
+            <Component Id="cmp747ce78ed0b046aaad5e101056b5c6f0" Directory="dir78d34247a65048b9985c61c52b22d4cd" Guid="{183d4bdb-34d5-419a-9e3d-86d6c057bb8b}">
+                <File Id="fila24ec34dfba746c89dbfb39c0e4150cf" KeyPath="yes" Source="$(var.sourceDir)\qml\Qt\labs\platform\qtlabsplatformplugin.dll" />
+            </Component>
+        </ComponentGroup>
+    </Fragment>
+</Wix>
