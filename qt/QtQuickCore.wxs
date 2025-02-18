@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
+    <Fragment>
+        <DirectoryRef Id="dirF8AAB67AB3E544FABDA0079E5CF0EBD6"> <!-- qml -->
+            <Directory Id="dird8f4ed35267645a1b298860f476f33da" Name="QtCore"/>
+        </DirectoryRef>
+    </Fragment>
+    <Fragment>
+        <ComponentGroup Id="CMP_QtQuickCore">
+            <Component Id="cmp1c8ca9a867fb4500a07564d8444eb3fb" Directory="APPLICATIONFOLDER" Guid="{4d6395ea-deec-459b-975d-64aa27596ef6}">
+                <File Id="fil325e9678e6dc47278e80f55140e327ba" KeyPath="yes" Source="$(var.sourceDir)\Qt6QmlCore.dll" />
+            </Component>
+
+            <Component Id="cmpba03b5d9b4d84168b00de9d28e1b0795" Directory="dird8f4ed35267645a1b298860f476f33da" Guid="{dbada4ee-19a4-4b64-aa94-2d60817c31a3}">
+                <File Id="fil739c3dd48bac43e2b734dab5cd52188e" KeyPath="yes" Source="$(var.sourceDir)\qml\QtCore\qmldir" />
+            </Component>
+            <Component Id="cmpf497e543b7044cfc8080222115ebb04b" Directory="dird8f4ed35267645a1b298860f476f33da" Guid="{04bc2424-29c3-43ac-9ddc-45513a66bec9}">
+                <File Id="fil718358e31c8848c1af6d005d0e2c9204" KeyPath="yes" Source="$(var.sourceDir)\qml\QtCore\qtqmlcoreplugin.dll" />
+            </Component>
+        </ComponentGroup>
+    </Fragment>
+</Wix>
