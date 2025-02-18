@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
+    <Fragment>
+        <DirectoryRef Id="dir5D365A66302EE436472B9F8DBECBCF8E"> <!-- qml/QtQuick -->
+            <Directory Id="dirfd14cc96ba104ef5b353c6cdeed7eda0" Name="Dialogs">
+                <Directory Id="dir167b0013e7354de699eeb6457fdf1334" Name="quickimpl"/>
+            </Directory>
+        </DirectoryRef>
+    </Fragment>
+    <Fragment>
+        <ComponentGroup Id="CMP_QtQuickDialogs">
+            <Component Id="cmp3420c19f82fd4541a3ee31fe0acc692b" Directory="APPLICATIONFOLDER" Guid="{475f7f2a-552c-4657-8940-27b34b3177b1}">
+                <File Id="filbe4d63859c264fa5b2ade0694b574617" KeyPath="yes" Source="$(var.sourceDir)\Qt6QuickDialogs2.dll" />
+            </Component>
+            <Component Id="cmpa9077e9cf96f426cb667157aee28bf3a" Directory="APPLICATIONFOLDER" Guid="{e11abbee-4958-4d35-b541-b0eb9799fb56}">
+                <File Id="fil5b7871c8bc36461ca9307c0310daef11" KeyPath="yes" Source="$(var.sourceDir)\Qt6QuickDialogs2QuickImpl.dll" />
+            </Component>
+            <Component Id="cmp0ffa7f8a416b431fa62f5f8e8b162f83" Directory="APPLICATIONFOLDER" Guid="{ba1a6d1b-6ef0-484b-87a4-0f77fabef107}">
+                <File Id="filb91ca51917a54ab4b9a1431518bc2b01" KeyPath="yes" Source="$(var.sourceDir)\Qt6QuickDialogs2Utils.dll" />
+            </Component>
+
+            <Component Id="cmpb4b43bebf34647f38573d69559730750" Directory="dirfd14cc96ba104ef5b353c6cdeed7eda0" Guid="{c06fb616-db26-480b-8022-fb51f7e16d5b}">
+                <File Id="fila7c15d4a9a8a438bb5b828aa9681ba97" KeyPath="yes" Source="$(var.sourceDir)\qml\QtQuick\Dialogs\qmldir" />
+            </Component>
+            <Component Id="cmp868b671fa2ca4674b547d24f5ec16cb4" Directory="dirfd14cc96ba104ef5b353c6cdeed7eda0" Guid="{f57fe09c-a932-4813-bae0-e8e3ff84e25c}">
+                <File Id="fild540913c886c4431944e707c0bc6f791" KeyPath="yes" Source="$(var.sourceDir)\qml\QtQuick\Dialogs\qtquickdialogsplugin.dll" />
+            </Component>
+            <Component Id="cmpca3262c4f5ee40939244808a7fd6dfa8" Directory="dir167b0013e7354de699eeb6457fdf1334" Guid="{5a2cb89d-f087-4f76-a4f2-ec0915659c33}">
+                <File Id="fil1cd319c5346545d6867ab43c08681262" KeyPath="yes" Source="$(var.sourceDir)\qml\QtQuick\Dialogs\quickimpl\qmldir" />
+            </Component>
+            <Component Id="cmp71b3555975414f4b9f343c35cb6bebf6" Directory="dir167b0013e7354de699eeb6457fdf1334" Guid="{32ea28b5-dda6-47f6-a0d9-8f42733dfeed}">
+                <File Id="fil3fb3ef431dbb4b4db1cb9452b535fd77" KeyPath="yes" Source="$(var.sourceDir)\qml\QtQuick\Dialogs\quickimpl\qtquickdialogs2quickimplplugin.dll" />
+            </Component>
+        </ComponentGroup>
+    </Fragment>
+</Wix>
+

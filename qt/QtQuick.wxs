@@ -18,9 +18,6 @@
                             <Directory Id="dir0879dd125ae94bcda9ae1d7b94d33206" Name="impl" />
                         </Directory>
                     </Directory>
-                    <Directory Id="dirfd14cc96ba104ef5b353c6cdeed7eda0" Name="Dialogs">
-                        <Directory Id="dir167b0013e7354de699eeb6457fdf1334" Name="quickimpl"/>
-                    </Directory>
                     <Directory Id="dirAB2260AC3D26DDA9D0165F8E083B172D" Name="Window" />
                     <Directory Id="dirD93798FEA1BD2BE0A48850A167BC6185" Name="Templates" />
                     <Directory Id="dirF50BAAB4DA30D72CC26F24C6AD2BA3DA" Name="Layouts" />
