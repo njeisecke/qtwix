@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
+    <Fragment>
+        <DirectoryRef Id="dir5D365A66302EE436472B9F8DBECBCF8E"> <!-- QtQuick -->
+            <Directory Id="dirc0ef43db41f245b79d4ece80b721c39f" Name="Effects" />
+        </DirectoryRef>
+    </Fragment>
+
+    <Fragment>
+        <ComponentGroup Id="CMP_QtQuickEffects">
+            <Component Id="cmpd32b83ef94da4a09899b29fe6ce7be5d" Directory="APPLICATIONFOLDER" Guid="{e1e7172c-4b0a-461d-ad69-6dea173e1776}">
+                <File Id="fil2dd5670fead34a06b4f4ff78cebd9a61" KeyPath="yes" Source="$(var.sourceDir)\Qt6QuickEffects.dll" />
+            </Component>
+            <Component Id="cmp559aa8357e7c4db9af792138a6a1273a" Directory="dirc0ef43db41f245b79d4ece80b721c39f" Guid="{74a58266-eb5b-4a94-8169-9d8f757c85f2}">
+                <File Id="fil69b12469086d4f1b97c4015a4f140e73" KeyPath="yes" Source="$(var.sourceDir)\qml\QtQuick\Effects\qmldir" />
+            </Component>
+            <Component Id="cmp348782f7b08d4f4dbc9d7803025a567f" Directory="dirc0ef43db41f245b79d4ece80b721c39f" Guid="{272eb323-ad7a-4584-ab47-69d6c6f16713}">
+                <File Id="filae927333d6dd48bdaac599b64e18c471" KeyPath="yes" Source="$(var.sourceDir)\qml\QtQuick\Effects\effectsplugin.dll" />
+            </Component>
+        </ComponentGroup>
+    </Fragment>
+</Wix>
+

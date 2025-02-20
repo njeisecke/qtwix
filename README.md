@@ -28,6 +28,7 @@ Add `ComponentGroupRef` entries for the required modules:
       <ComponentGroupRef Id="CMP_QtQuickControlsFusion" />
       <ComponentGroupRef Id="CMP_QtQuickControlsMaterial" />
       <ComponentGroupRef Id="CMP_QtQuickDialogs" />
+      <ComponentGroupRef Id="CMP_QtQuickEffects" />
       <ComponentGroupRef Id="CMP_QtQuickWidget" />
       <ComponentGroupRef Id="CMP_QtQuickLabsPlatform" />
       <ComponentGroupRef Id="CMP_QtNetwork" />
