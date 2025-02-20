@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
+    <Fragment>
+        <DirectoryRef Id="dirfb3e0947d3eb4b28bc06cf3dbea81006"> <!-- labs -->
+            <Directory Id="dir8d34247a65048b9985c61c52b22d4cd" Name="folderlistmodel" />
+        </DirectoryRef>
+    </Fragment>
+
+    <Fragment>
+        <ComponentGroup Id="CMP_QtQuickLabsFolderListModel">
+            <Component Id="cmpb45b1305509c473c8498b1a45fa204e1" Directory="APPLICATIONFOLDER" Guid="{26303a4b-4811-4af2-b827-c1486b0c47b6}">
+                <File Id="fil4c3d7d5bbb4d4e04bf6d3a207cf4f2e9" KeyPath="yes" Source="$(var.sourceDir)\Qt6LabsFolderListModel.dll" />
+            </Component>
+            <Component Id="cmp1e09649877db4862871daec84be46122" Directory="dir8d34247a65048b9985c61c52b22d4cd" Guid="{52ac9406-8547-447d-8eb3-398ea0f9efd0}">
+                <File Id="filaa29e921c894763bce225b9031238f3" KeyPath="yes" Source="$(var.sourceDir)\qml\Qt\labs\folderlistmodel\qmldir" />
+            </Component>
+            <Component Id="cmp47ce78ed0b046aaad5e101056b5c6f0" Directory="dir8d34247a65048b9985c61c52b22d4cd" Guid="{2eb0912d-f9a2-44d5-80d2-2a48922c04c4}">
+                <File Id="fil24ec34dfba746c89dbfb39c0e4150cf" KeyPath="yes" Source="$(var.sourceDir)\qml\Qt\labs\folderlistmodel\qmlfolderlistmodelplugin.dll" />
+            </Component>
+        </ComponentGroup>
+    </Fragment>
+</Wix>

@@ -1,12 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
     <Fragment>
-        <DirectoryRef Id="dirF8AAB67AB3E544FABDA0079E5CF0EBD6"> <!-- qml -->
-            <Directory Id="dira4035ec437154bc0a3d15e1607801441" Name="Qt">
-                <Directory Id="dirfb3e0947d3eb4b28bc06cf3dbea81006" Name="labs">
-                    <Directory Id="dir78d34247a65048b9985c61c52b22d4cd" Name="platform" />
-                </Directory>
-            </Directory>
+        <DirectoryRef Id="dirfb3e0947d3eb4b28bc06cf3dbea81006"> <!-- labs -->
+            <Directory Id="dir78d34247a65048b9985c61c52b22d4cd" Name="platform" />
         </DirectoryRef>
     </Fragment>
 

@@ -3,6 +3,9 @@
     <Fragment>
         <DirectoryRef Id="APPLICATIONFOLDER">
             <Directory Id="dirF8AAB67AB3E544FABDA0079E5CF0EBD6" Name="qml">
+                <Directory Id="dira4035ec437154bc0a3d15e1607801441" Name="Qt">
+                    <Directory Id="dirfb3e0947d3eb4b28bc06cf3dbea81006" Name="labs" />
+                </Directory>
                 <Directory Id="dirD0ACD80F8D6B292E8F9A63FDD093ADEA" Name="QtQml">
                     <Directory Id="dir64fbe422fdcb4e939348c0b1c76d3144" Name="Base" />
                     <Directory Id="dir2947D19C6E3A3D8C7D629D9FC6609CAB" Name="Models" />
