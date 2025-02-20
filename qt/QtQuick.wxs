@@ -11,12 +11,10 @@
                 <Directory Id="dir5D365A66302EE436472B9F8DBECBCF8E" Name="QtQuick">
                     <Directory Id="dir337139ADA00C7E3074A6AA83348E4CB9" Name="Controls">
                         <Directory Id="dirb92d4680934347518c33e7bcd7fd444b" Name="impl" />
-                        <Directory Id="dir386201E5D3261DCFE7C4AA8FCCCF1ECF" Name="Fusion">
-                            <Directory Id="dirdf150229471b472da8033b9babbaf295" Name="impl" />
-                        </Directory>
                         <Directory Id="dirc6c1186c5ed943749f364e018a09ee7f" Name="Basic">
                             <Directory Id="dir0879dd125ae94bcda9ae1d7b94d33206" Name="impl" />
                         </Directory>
+                        <!-- more styles in separate fragments -->
                     </Directory>
                     <Directory Id="dirAB2260AC3D26DDA9D0165F8E083B172D" Name="Window" />
                     <Directory Id="dirD93798FEA1BD2BE0A48850A167BC6185" Name="Templates" />
@@ -41,9 +39,12 @@
                 <File Id="fil7d018f6d0a1a41138d83c7f0dbf75ae5" KeyPath="yes" Source="$(var.sourceDir)\Qt6OpenGL.dll" />
             </Component>
 
+            <!-- Software Renderer -->
             <Component Id="cmp69ddf494a7894647800bb651a6860f87" Directory="APPLICATIONFOLDER" Guid="{30d33136-0c8c-4cf6-8c94-78eb25b8935f}">
                 <File Id="fil53be4a7ab3374dcb8180163ba8423a48" KeyPath="yes" Source="$(var.sourceDir)\opengl32sw.dll" />
             </Component>
+
+            <!-- Qml -->
             <Component Id="cmp5BF9D1345C7D33B31400744F901C1CD4" Directory="APPLICATIONFOLDER" Guid="{5E9F2186-8D6C-4F18-9DC2-4C358F43A2EB}">
                 <File Id="filB483FFE7EE9B698FA1E4EDF8C4E6819D" KeyPath="yes" Source="$(var.sourceDir)\Qt6Qml.dll" />
             </Component>
@@ -55,30 +56,6 @@
             </Component>
             <Component Id="cmp4588e213ebce4a01b103e66541931860" Directory="APPLICATIONFOLDER" Guid="{98b1e6ec-05d5-4109-902c-1fe8ded03d32}">
                 <File Id="fil14dacec236674a84af61e8eaa646d582" KeyPath="yes" Source="$(var.sourceDir)\Qt6QmlWorkerScript.dll" />
-            </Component>
-            <Component Id="cmpFBF38C06165DE2A40DECB83BED73F618" Directory="APPLICATIONFOLDER" Guid="{E17DB523-3E2E-48FB-BDCD-2A67B6390825}">
-                <File Id="fil1E5C95F048C6F68EAED5DBDE5AE50747" KeyPath="yes" Source="$(var.sourceDir)\Qt6Quick.dll" />
-            </Component>
-            <Component Id="cmp7D14CE53D43337A67E414BC5C9CAAA87" Directory="APPLICATIONFOLDER" Guid="{D168C37B-E5F8-4119-BB01-6334C1B9FC72}">
-                <File Id="fil2DEE514DB59E4ED7ADD56AAB24D56AFD" KeyPath="yes" Source="$(var.sourceDir)\Qt6QuickControls2.dll" />
-            </Component>
-            <Component Id="cmp819f7646266447ee8f966ca8ac36680a" Directory="APPLICATIONFOLDER" Guid="{259041f4-79a8-4a3a-8bad-6e690757828d}">
-                <File Id="filebb738832d7341babf377b7e92ba0e92" KeyPath="yes" Source="$(var.sourceDir)\Qt6QuickControls2Impl.dll" />
-            </Component>
-            <Component Id="cmp7ce4634a7cb9412dbe09a3c5f6c5cc59" Directory="APPLICATIONFOLDER" Guid="{172c5b5c-e5eb-4efa-a17c-b21d6477466d}">
-                <File Id="fil88bcc28df5784c2aa38e27d5dcfb4141" KeyPath="yes" Source="$(var.sourceDir)\Qt6QuickLayouts.dll" />
-            </Component>
-            <Component Id="cmp5A63D4DB525F2A6B2474E3CA324B1016" Directory="APPLICATIONFOLDER" Guid="{B790582F-486C-44B8-AA82-966CDEB39C7D}">
-                <File Id="filACA690FDCBDC9C544D009F0B0AFC5CD0" KeyPath="yes" Source="$(var.sourceDir)\Qt6QuickTemplates2.dll" />
-            </Component>
-            <Component Id="cmpf23935024bbc44feb86cc253257b05ad" Directory="APPLICATIONFOLDER" Guid="{3cc37915-8d97-48f3-a05b-3c626423900c}">
-                <File Id="fil5439040ed6434b7a8cff9bb5b450a2ed" KeyPath="yes" Source="$(var.sourceDir)\Qt6QuickControls2Basic.dll" />
-            </Component>
-            <Component Id="cmp2691fa3189a74075b3ac16f3d2e3f107" Directory="APPLICATIONFOLDER" Guid="{26371b2c-30fa-4e14-83dd-aa0374abe66f}">
-                <File Id="fil342b8a43c27440af9d4ebe0104270701" KeyPath="yes" Source="$(var.sourceDir)\Qt6QuickControls2Fusion.dll" />
-            </Component>
-            <Component Id="cmpf3007e57a79945948521ddef7252a0fd" Directory="APPLICATIONFOLDER" Guid="{e09e5ba5-b20a-4ca8-a3c8-21dde62b7f8c}">
-                <File Id="fil6c75443dfdf046829e376faf08ddd2a5" KeyPath="yes" Source="$(var.sourceDir)\Qt6QuickControls2FusionStyleImpl.dll" />
             </Component>
             <Component Id="cmpB1356AF736050F5171ABB461916B34EF" Directory="dirD0ACD80F8D6B292E8F9A63FDD093ADEA" Guid="{DD22F826-CCDA-46E5-A357-5D7B2DF5C340}">
                 <File Id="filBD1B90C60C4F58C5E61AB6A12F206A5E" KeyPath="yes" Source="$(var.sourceDir)\qml\QtQml\qmldir" />
@@ -98,11 +75,72 @@
             <Component Id="cmp77dcd3990cff46d390029541edce6d2a" Directory="dir1e040124322e478093858d60701ea66f" Guid="{ac3f9c9a-dc22-49ac-9295-b0609205c7b0}">
                 <File Id="fil0abc572e7b204bbab389ae921da19c15" KeyPath="yes" Source="$(var.sourceDir)\qml\QtQml\WorkerScript\qmldir" />
             </Component>
+
+            <!-- Quick -->
+            <Component Id="cmpFBF38C06165DE2A40DECB83BED73F618" Directory="APPLICATIONFOLDER" Guid="{E17DB523-3E2E-48FB-BDCD-2A67B6390825}">
+                <File Id="fil1E5C95F048C6F68EAED5DBDE5AE50747" KeyPath="yes" Source="$(var.sourceDir)\Qt6Quick.dll" />
+            </Component>
+            <Component Id="cmpD0FA55FF5DEDEB6B0E1B2D21F8259919" Directory="dir5D365A66302EE436472B9F8DBECBCF8E" Guid="{74DC7F5C-DA35-44F8-BDA6-BE69ED21B19D}">
+                <File Id="fil69EDACF9BB8A974031FF3BF9C2F167A1" KeyPath="yes" Source="$(var.sourceDir)\qml\QtQuick\qmldir" />
+            </Component>
+            <Component Id="cmp3C417FA940194A530A5F5710779A0B7A" Directory="dir5D365A66302EE436472B9F8DBECBCF8E" Guid="{4235D243-67B1-492E-8505-3FFE237C423D}">
+                <File Id="fil3B037EE2E93DE6AC2B5C139E2C1C8AA1" KeyPath="yes" Source="$(var.sourceDir)\qml\QtQuick\qtquick2plugin.dll" />
+            </Component>
+
+            <!-- Layouts -->
+            <Component Id="cmp7ce4634a7cb9412dbe09a3c5f6c5cc59" Directory="APPLICATIONFOLDER" Guid="{172c5b5c-e5eb-4efa-a17c-b21d6477466d}">
+                <File Id="fil88bcc28df5784c2aa38e27d5dcfb4141" KeyPath="yes" Source="$(var.sourceDir)\Qt6QuickLayouts.dll" />
+            </Component>
+
+            <Component Id="cmp98B6E4C0E7B6E8509B4BD7505B8E4CBD" Directory="dirF50BAAB4DA30D72CC26F24C6AD2BA3DA" Guid="{006DCB58-2A3F-4926-9C02-5BEC6451CF93}">
+                <File Id="filB8F723299BFCA2023BF99D9F4D084D9A" KeyPath="yes" Source="$(var.sourceDir)\qml\QtQuick\Layouts\qmldir" />
+            </Component>
+            <Component Id="cmp23208D9D1D4B82A37DB4DCC19562F8EF" Directory="dirF50BAAB4DA30D72CC26F24C6AD2BA3DA" Guid="{CC786A75-3A5A-4E5C-90B4-546728452AA4}">
+                <File Id="fil33C52B177288BEE469C24363023ACA84" KeyPath="yes" Source="$(var.sourceDir)\qml\QtQuick\Layouts\qquicklayoutsplugin.dll" />
+            </Component>
+
+            <!-- Window -->
+            <Component Id="cmp2F3C713F71269124DFA08AC0D157DF4E" Directory="dirAB2260AC3D26DDA9D0165F8E083B172D" Guid="{243A9C63-197F-4395-A1B1-89C5A7C93414}">
+                <File Id="fil3D1AA6A7AE028C8835A7F4200AB90AEE" KeyPath="yes" Source="$(var.sourceDir)\qml\QtQuick\Window\qmldir" />
+            </Component>
+            <Component Id="cmp13E86A052399B1ECE9CE3C00FF1F2B9A" Directory="dirAB2260AC3D26DDA9D0165F8E083B172D" Guid="{6E906547-20F0-4C27-ABCD-AE92A4EC14E8}">
+                <File Id="filF86E1ECA4D9C681606AF5084CF3A4CAB" KeyPath="yes" Source="$(var.sourceDir)\qml\QtQuick\Window\quickwindowplugin.dll" />
+            </Component>
+
+            <!-- Controls -->
+            <Component Id="cmp7D14CE53D43337A67E414BC5C9CAAA87" Directory="APPLICATIONFOLDER" Guid="{D168C37B-E5F8-4119-BB01-6334C1B9FC72}">
+                <File Id="fil2DEE514DB59E4ED7ADD56AAB24D56AFD" KeyPath="yes" Source="$(var.sourceDir)\Qt6QuickControls2.dll" />
+            </Component>
+            <Component Id="cmp819f7646266447ee8f966ca8ac36680a" Directory="APPLICATIONFOLDER" Guid="{259041f4-79a8-4a3a-8bad-6e690757828d}">
+                <File Id="filebb738832d7341babf377b7e92ba0e92" KeyPath="yes" Source="$(var.sourceDir)\Qt6QuickControls2Impl.dll" />
+            </Component>
+            <Component Id="cmp5aaf74a4be0b45409d75b606563a5442" Directory="dirb92d4680934347518c33e7bcd7fd444b" Guid="{c0578dd1-0b7e-4337-87a4-6707150a4ae4}">
+                <File Id="fil98d7930979a84269addb295113502e12" KeyPath="yes" Source="$(var.sourceDir)\qml\QtQuick\Controls\impl\qmldir" />
+            </Component>
+            <Component Id="cmp9e2beeabd0564ce4ad2b91b6097d87c7" Directory="dirb92d4680934347518c33e7bcd7fd444b" Guid="{4d61a1b7-cda6-4a72-9a19-8f0665971851}">
+                <File Id="fil442790bbe8fb4f0291f7696e943e96cf" KeyPath="yes" Source="$(var.sourceDir)\qml\QtQuick\Controls\impl\qtquickcontrols2implplugin.dll" />
+            </Component>
             <Component Id="cmpEB175272992940B07DBBBDABE99590CE" Directory="dir337139ADA00C7E3074A6AA83348E4CB9" Guid="{7A81858A-C796-45C9-B24B-6E0752F16257}">
                 <File Id="fil55489C6A5CCD65ED0E89A916BF304D5A" KeyPath="yes" Source="$(var.sourceDir)\qml\QtQuick\Controls\qmldir" />
             </Component>
             <Component Id="cmpAA65F0A1EC90CAA2722E4CC7946A7905" Directory="dir337139ADA00C7E3074A6AA83348E4CB9" Guid="{4F37B55B-1DD5-4FBA-BFDF-D29B42FB3239}">
                 <File Id="fil2A4D072CEA660038C4DFE51DA7272750" KeyPath="yes" Source="$(var.sourceDir)\qml\QtQuick\Controls\qtquickcontrols2plugin.dll" />
+            </Component>
+
+            <!-- Templates -->
+            <Component Id="cmp5A63D4DB525F2A6B2474E3CA324B1016" Directory="APPLICATIONFOLDER" Guid="{B790582F-486C-44B8-AA82-966CDEB39C7D}">
+                <File Id="filACA690FDCBDC9C544D009F0B0AFC5CD0" KeyPath="yes" Source="$(var.sourceDir)\Qt6QuickTemplates2.dll" />
+            </Component>
+            <Component Id="cmpDFF59FDCD59811A3F17400C7849324DF" Directory="dirD93798FEA1BD2BE0A48850A167BC6185" Guid="{2AE22DE3-8B98-4C01-B107-0701F8B95279}">
+                <File Id="filE0A7DBFCDED7DD14143C6D7B4C735700" KeyPath="yes" Source="$(var.sourceDir)\qml\QtQuick\Templates\qmldir" />
+            </Component>
+            <Component Id="cmp43CA7735EF3E6FA1EF161D4F566E1C35" Directory="dirD93798FEA1BD2BE0A48850A167BC6185" Guid="{C3545A70-0F98-45BE-9B2A-AF86E37BC19F}">
+                <File Id="fil5FB6976B6E97CD66D7A6B1901B668F94" KeyPath="yes" Source="$(var.sourceDir)\qml\QtQuick\Templates\qtquicktemplates2plugin.dll" />
+            </Component>
+
+            <!-- Style: Basic -->
+            <Component Id="cmpf23935024bbc44feb86cc253257b05ad" Directory="APPLICATIONFOLDER" Guid="{3cc37915-8d97-48f3-a05b-3c626423900c}">
+                <File Id="fil5439040ed6434b7a8cff9bb5b450a2ed" KeyPath="yes" Source="$(var.sourceDir)\Qt6QuickControls2Basic.dll" />
             </Component>
             <Component Id="cmp5d18c6f1e2e74921b91d3a42d748df0a" Directory="dirc6c1186c5ed943749f364e018a09ee7f" Guid="{c89f34f4-3d09-4882-b18e-560788f8ea5c}">
                 <File Id="fildba579d0f869450aa08ef19482fd9726" KeyPath="yes" Source="$(var.sourceDir)\qml\QtQuick\Controls\Basic\qmldir" />
@@ -115,48 +153,6 @@
             </Component>
             <Component Id="cmp5f323cf6e2a443ba81c0f6f5a9073120" Directory="dir0879dd125ae94bcda9ae1d7b94d33206" Guid="{89ce02c4-5d14-4f2e-a79f-57789353b770}">
                 <File Id="fil193ecec68d6b409cacf87e5d52e56ee4" KeyPath="yes" Source="$(var.sourceDir)\qml\QtQuick\Controls\Basic\impl\qtquickcontrols2basicstyleimplplugin.dll" />
-            </Component>
-            <Component Id="cmp31EB1C4E6899967081225FD141AF750B" Directory="dir386201E5D3261DCFE7C4AA8FCCCF1ECF" Guid="{5EA5A884-96FC-44B1-9EC5-0EE8182E3289}">
-                <File Id="filE97DE985C6F76FF9A56244B1DE233A2D" KeyPath="yes" Source="$(var.sourceDir)\qml\QtQuick\Controls\Fusion\qmldir" />
-            </Component>
-            <Component Id="cmp5aaf74a4be0b45409d75b606563a5442" Directory="dirb92d4680934347518c33e7bcd7fd444b" Guid="{c0578dd1-0b7e-4337-87a4-6707150a4ae4}">
-                <File Id="fil98d7930979a84269addb295113502e12" KeyPath="yes" Source="$(var.sourceDir)\qml\QtQuick\Controls\impl\qmldir" />
-            </Component>
-            <Component Id="cmp9e2beeabd0564ce4ad2b91b6097d87c7" Directory="dirb92d4680934347518c33e7bcd7fd444b" Guid="{4d61a1b7-cda6-4a72-9a19-8f0665971851}">
-                <File Id="fil442790bbe8fb4f0291f7696e943e96cf" KeyPath="yes" Source="$(var.sourceDir)\qml\QtQuick\Controls\impl\qtquickcontrols2implplugin.dll" />
-            </Component>
-            <Component Id="cmp94E8A7BA3AEF005482C882B38CDEC832" Directory="dir386201E5D3261DCFE7C4AA8FCCCF1ECF" Guid="{FAC361D7-FEFD-4A70-8D43-4A769A735431}">
-                <File Id="filCF253A7238F255C257203B73494349B0" KeyPath="yes" Source="$(var.sourceDir)\qml\QtQuick\Controls\Fusion\qtquickcontrols2fusionstyleplugin.dll" />
-            </Component>
-            <Component Id="cmpdeba6c4fa2df4bc9a0190c6f29d1f28c" Directory="dirdf150229471b472da8033b9babbaf295" Guid="{1e2f769b-50a0-43b1-a1a9-157da63f33be}">
-                <File Id="file22188ab1f8546ad949fcf33b60dc2d3" KeyPath="yes" Source="$(var.sourceDir)\qml\QtQuick\Controls\Fusion\impl\qmldir" />
-            </Component>
-            <Component Id="cmp0086eed5bba24bfd90a0805da503c9de" Directory="dirdf150229471b472da8033b9babbaf295" Guid="{3d971704-9a15-440c-bb4d-8d7302d7c733}">
-                <File Id="fil39819419641b42c3aab92d0a32140fb3" KeyPath="yes" Source="$(var.sourceDir)\qml\QtQuick\Controls\Fusion\impl\qtquickcontrols2fusionstyleimplplugin.dll" />
-            </Component>
-            <Component Id="cmp98B6E4C0E7B6E8509B4BD7505B8E4CBD" Directory="dirF50BAAB4DA30D72CC26F24C6AD2BA3DA" Guid="{006DCB58-2A3F-4926-9C02-5BEC6451CF93}">
-                <File Id="filB8F723299BFCA2023BF99D9F4D084D9A" KeyPath="yes" Source="$(var.sourceDir)\qml\QtQuick\Layouts\qmldir" />
-            </Component>
-            <Component Id="cmp23208D9D1D4B82A37DB4DCC19562F8EF" Directory="dirF50BAAB4DA30D72CC26F24C6AD2BA3DA" Guid="{CC786A75-3A5A-4E5C-90B4-546728452AA4}">
-                <File Id="fil33C52B177288BEE469C24363023ACA84" KeyPath="yes" Source="$(var.sourceDir)\qml\QtQuick\Layouts\qquicklayoutsplugin.dll" />
-            </Component>
-            <Component Id="cmpDFF59FDCD59811A3F17400C7849324DF" Directory="dirD93798FEA1BD2BE0A48850A167BC6185" Guid="{2AE22DE3-8B98-4C01-B107-0701F8B95279}">
-                <File Id="filE0A7DBFCDED7DD14143C6D7B4C735700" KeyPath="yes" Source="$(var.sourceDir)\qml\QtQuick\Templates\qmldir" />
-            </Component>
-            <Component Id="cmp43CA7735EF3E6FA1EF161D4F566E1C35" Directory="dirD93798FEA1BD2BE0A48850A167BC6185" Guid="{C3545A70-0F98-45BE-9B2A-AF86E37BC19F}">
-                <File Id="fil5FB6976B6E97CD66D7A6B1901B668F94" KeyPath="yes" Source="$(var.sourceDir)\qml\QtQuick\Templates\qtquicktemplates2plugin.dll" />
-            </Component>
-            <Component Id="cmp2F3C713F71269124DFA08AC0D157DF4E" Directory="dirAB2260AC3D26DDA9D0165F8E083B172D" Guid="{243A9C63-197F-4395-A1B1-89C5A7C93414}">
-                <File Id="fil3D1AA6A7AE028C8835A7F4200AB90AEE" KeyPath="yes" Source="$(var.sourceDir)\qml\QtQuick\Window\qmldir" />
-            </Component>
-            <Component Id="cmp13E86A052399B1ECE9CE3C00FF1F2B9A" Directory="dirAB2260AC3D26DDA9D0165F8E083B172D" Guid="{6E906547-20F0-4C27-ABCD-AE92A4EC14E8}">
-                <File Id="filF86E1ECA4D9C681606AF5084CF3A4CAB" KeyPath="yes" Source="$(var.sourceDir)\qml\QtQuick\Window\quickwindowplugin.dll" />
-            </Component>
-            <Component Id="cmpD0FA55FF5DEDEB6B0E1B2D21F8259919" Directory="dir5D365A66302EE436472B9F8DBECBCF8E" Guid="{74DC7F5C-DA35-44F8-BDA6-BE69ED21B19D}">
-                <File Id="fil69EDACF9BB8A974031FF3BF9C2F167A1" KeyPath="yes" Source="$(var.sourceDir)\qml\QtQuick\qmldir" />
-            </Component>
-            <Component Id="cmp3C417FA940194A530A5F5710779A0B7A" Directory="dir5D365A66302EE436472B9F8DBECBCF8E" Guid="{4235D243-67B1-492E-8505-3FFE237C423D}">
-                <File Id="fil3B037EE2E93DE6AC2B5C139E2C1C8AA1" KeyPath="yes" Source="$(var.sourceDir)\qml\QtQuick\qtquick2plugin.dll" />
             </Component>
 
         </ComponentGroup>

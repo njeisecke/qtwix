@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
+    <Fragment>
+        <DirectoryRef Id="dir337139ADA00C7E3074A6AA83348E4CB9">
+            <Directory Id="dir386201E5D3261DCFE7C4AA8FCCCF1ECF" Name="Fusion">
+                <Directory Id="dirdf150229471b472da8033b9babbaf295" Name="impl" />
+            </Directory>
+        </DirectoryRef>
+    </Fragment>
+
+    <Fragment>
+        <ComponentGroup Id="CMP_QtQuickControlsFusion">
+            <!-- Style: Fusion -->
+            <Component Id="cmp2691fa3189a74075b3ac16f3d2e3f107" Directory="APPLICATIONFOLDER" Guid="{26371b2c-30fa-4e14-83dd-aa0374abe66f}">
+                <File Id="fil342b8a43c27440af9d4ebe0104270701" KeyPath="yes" Source="$(var.sourceDir)\Qt6QuickControls2Fusion.dll" />
+            </Component>
+            <Component Id="cmpf3007e57a79945948521ddef7252a0fd" Directory="APPLICATIONFOLDER" Guid="{e09e5ba5-b20a-4ca8-a3c8-21dde62b7f8c}">
+                <File Id="fil6c75443dfdf046829e376faf08ddd2a5" KeyPath="yes" Source="$(var.sourceDir)\Qt6QuickControls2FusionStyleImpl.dll" />
+            </Component>
+            <Component Id="cmp31EB1C4E6899967081225FD141AF750B" Directory="dir386201E5D3261DCFE7C4AA8FCCCF1ECF" Guid="{5EA5A884-96FC-44B1-9EC5-0EE8182E3289}">
+                <File Id="filE97DE985C6F76FF9A56244B1DE233A2D" KeyPath="yes" Source="$(var.sourceDir)\qml\QtQuick\Controls\Fusion\qmldir" />
+            </Component>
+            <Component Id="cmp94E8A7BA3AEF005482C882B38CDEC832" Directory="dir386201E5D3261DCFE7C4AA8FCCCF1ECF" Guid="{FAC361D7-FEFD-4A70-8D43-4A769A735431}">
+                <File Id="filCF253A7238F255C257203B73494349B0" KeyPath="yes" Source="$(var.sourceDir)\qml\QtQuick\Controls\Fusion\qtquickcontrols2fusionstyleplugin.dll" />
+            </Component>
+            <Component Id="cmpdeba6c4fa2df4bc9a0190c6f29d1f28c" Directory="dirdf150229471b472da8033b9babbaf295" Guid="{1e2f769b-50a0-43b1-a1a9-157da63f33be}">
+                <File Id="file22188ab1f8546ad949fcf33b60dc2d3" KeyPath="yes" Source="$(var.sourceDir)\qml\QtQuick\Controls\Fusion\impl\qmldir" />
+            </Component>
+            <Component Id="cmp0086eed5bba24bfd90a0805da503c9de" Directory="dirdf150229471b472da8033b9babbaf295" Guid="{3d971704-9a15-440c-bb4d-8d7302d7c733}">
+                <File Id="fil39819419641b42c3aab92d0a32140fb3" KeyPath="yes" Source="$(var.sourceDir)\qml\QtQuick\Controls\Fusion\impl\qtquickcontrols2fusionstyleimplplugin.dll" />
+            </Component>
+        </ComponentGroup>
+    </Fragment>
+</Wix>

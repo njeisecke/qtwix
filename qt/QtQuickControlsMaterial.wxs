@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
+    <Fragment>
+        <DirectoryRef Id="dir337139ADA00C7E3074A6AA83348E4CB9">
+            <Directory Id="dire882f7e3d1974ffaa40d87d2a6a658e5" Name="Material">
+                <Directory Id="dir0c6a4c28037d433c9bc60754f40bd39b" Name="impl" />
+            </Directory>
+        </DirectoryRef>
+    </Fragment>
+
+    <Fragment>
+        <ComponentGroup Id="CMP_QtQuickControlsMaterial">
+            <!-- Style: Material -->
+            <Component Id="cmpedb1454657884fbe8f8409c0f4849d13" Directory="APPLICATIONFOLDER" Guid="{134c0b9b-17f1-4169-a7bd-993de0064aa7}">
+                <File Id="fil8b06484ab10f46be99d93211cb39bd74" KeyPath="yes" Source="$(var.sourceDir)\Qt6QuickControls2Material.dll" />
+            </Component>
+            <Component Id="cmpf9d257c2cb91495e83ce7a22b05e7b93" Directory="APPLICATIONFOLDER" Guid="{4aee90b3-0fb3-4961-8620-03bac5541cb5}">
+                <File Id="filbabcf387643f4713ae62aa079905a96c" KeyPath="yes" Source="$(var.sourceDir)\Qt6QuickControls2MaterialStyleImpl.dll" />
+            </Component>
+            <Component Id="cmp2a4f911833af44c98310cad57fb18a87" Directory="dire882f7e3d1974ffaa40d87d2a6a658e5" Guid="{0b9dcadd-879c-4bd1-9f01-fdfaf272b012}">
+                <File Id="filbb2638adb55f487ab5ea608e02da6a64" KeyPath="yes" Source="$(var.sourceDir)\qml\QtQuick\Controls\Material\qmldir" />
+            </Component>
+            <Component Id="cmp5379ecf8962b45a49b650b79982c8083" Directory="dire882f7e3d1974ffaa40d87d2a6a658e5" Guid="{21a94ef7-7578-462c-9740-c9af734d5cd0}">
+                <File Id="fil53579553cb644196a699ff1cfdbc4db5" KeyPath="yes" Source="$(var.sourceDir)\qml\QtQuick\Controls\Material\qtquickcontrols2materialstyleplugin.dll" />
+            </Component>
+            <Component Id="cmpccc59995eec749e18cfebd34c3a80121" Directory="dir0c6a4c28037d433c9bc60754f40bd39b" Guid="{c6b4c102-870d-42d9-8411-ac09164f7ef2}">
+                <File Id="fil1d76b00ff0414f29922cbf9eb494230e" KeyPath="yes" Source="$(var.sourceDir)\qml\QtQuick\Controls\Material\impl\qmldir" />
+            </Component>
+            <Component Id="cmpc50b2e68d47e42ada6cb21c8e5289cc9" Directory="dir0c6a4c28037d433c9bc60754f40bd39b" Guid="{0fadc836-ac29-4153-b75d-e1a1b8d64a92}">
+                <File Id="fil183c37c31e964786b9d498c84301cf75" KeyPath="yes" Source="$(var.sourceDir)\qml\QtQuick\Controls\Material\impl\qtquickcontrols2materialstyleimplplugin.dll" />
+            </Component>
+        </ComponentGroup>
+    </Fragment>
+</Wix>
