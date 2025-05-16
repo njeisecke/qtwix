@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
+    <!-- requires QtNetwork for the tls folder -->
+    <Fragment>
+        <ComponentGroup Id="CMP_QtNetworkOpenSSL">
+            <Component Id="cmpa3d324dbebb846d8a75d206d12d311b3" Directory="dirDA1287EF18298l8FF888DEAD6E77198F" Guid="{c8fcb3ce-1f78-42d7-844f-6452123f9527}">
+                <File Id="fil5b73684d5e0148bd99548794a5541358" KeyPath="yes" Source="$(var.sourceDir)\tls\qopensslbackend.dll" />
+            </Component>
+        </ComponentGroup>
+    </Fragment>
+</Wix>
+

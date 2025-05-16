@@ -1,11 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
     <Fragment>
-        <DirectoryRef Id="APPLICATIONFOLDER">
-            <Directory Id="dirDA1287EF18298l8FF888DEAD6E77198F" Name="tls" />
-        </DirectoryRef>
-    </Fragment>
-    <Fragment>
         <ComponentGroup Id="CMP_QtWebSockets">
             <Component Id="cmp6E4A5A4C52FA321FD438E945EEEA1F81" Directory="APPLICATIONFOLDER" Guid="{4F738A75-779A-4509-8C91-E179DF22CA38}">
                 <File Id="fi12899351934F28829A282B98982982A18" KeyPath="yes" Source="$(var.sourceDir)\Qt6WebSockets.dll" />

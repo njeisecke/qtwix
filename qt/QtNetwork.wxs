@@ -10,9 +10,6 @@
             <Component Id="cmp5E4F2A3C52FA321FD438E945EFEDD470" Directory="APPLICATIONFOLDER" Guid="{26EE85EA-E7EE-4F8B-A3B8-F4CDB02BBBDC}">
                 <File Id="fil2856FC368078AF6867469D9DB96D9881" KeyPath="yes" Source="$(var.sourceDir)\Qt6Network.dll" />
             </Component>
-            <Component Id="cmpff7c3ae205b34739b865426297afe2ca" Directory="dirDA1287EF18298l8FF888DEAD6E77198F" Guid="{DD510E00-FFB3-47A2-9FDC-3A9C37AC0C4B}">
-                <File Id="filA3C61ACD37C546E7AAC6C21A3954E364" KeyPath="yes" Source="$(var.sourceDir)\tls\qschannelbackend.dll" />
-            </Component>
         </ComponentGroup>
     </Fragment>
 </Wix>

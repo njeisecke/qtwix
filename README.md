@@ -32,6 +32,8 @@ Add `ComponentGroupRef` entries for the required modules:
       <ComponentGroupRef Id="CMP_QtQuickWidget" />
       <ComponentGroupRef Id="CMP_QtQuickLabsPlatform" />
       <ComponentGroupRef Id="CMP_QtNetwork" />
+      <ComponentGroupRef Id="CMP_QtNetworkOpenSSL" />  <!-- tls: openssl backend ->
+      <ComponentGroupRef Id="CMP_QtNetworkSChannel" /> <!-- tls: windows native api ->
       <ComponentGroupRef Id="CMP_QtNetworkAuth" />
       <ComponentGroupRef Id="CMP_QtSql" />
       <ComponentGroupRef Id="CMP_QtWebSockets" />

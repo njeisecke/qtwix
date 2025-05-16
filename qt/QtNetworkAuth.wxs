@@ -1,11 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
     <Fragment>
-        <DirectoryRef Id="APPLICATIONFOLDER">
-            <Directory Id="dirDA1287EF18298l8FF888DEAD6E77198F" Name="tls" />
-        </DirectoryRef>
-    </Fragment>
-    <Fragment>
         <ComponentGroup Id="CMP_QtNetworkAuth">
             <Component Id="cmpa72a26393578483688db4624473cbdcf" Directory="APPLICATIONFOLDER" Guid="{9f661da9-cac5-4109-9921-9fd0993f0d54}">
                 <File Id="fil245bf010c5334afaaacbb3ee0a54db32" KeyPath="yes" Source="$(var.sourceDir)\Qt6NetworkAuth.dll" />
