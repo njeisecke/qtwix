@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
+    <Fragment>
+        <!-- engine plugins: SAPI or WinRT -->
+        <DirectoryRef Id="APPLICATIONFOLDER">
+            <Directory Id="dirf48b023c136b476d935bb9eab72730e9" Name="texttospeech" />
+        </DirectoryRef>
+    </Fragment>
+    <Fragment>
+        <ComponentGroup Id="CMP_QtTextToSpeech">
+            <Component Id="cmpf437b10da3654b82bf0c115a60e4f110" Directory="APPLICATIONFOLDER" Guid="{1f502cfa-8068-4919-843b-564ef0127a47}">
+                <File Id="fil1248d0adef924a7e9e8a6cacde608bad" KeyPath="yes" Source="$(var.sourceDir)\Qt6TextToSpeech.dll" />
+            </Component>
+        </ComponentGroup>
+    </Fragment>
+</Wix>

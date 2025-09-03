@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
+    <!-- requires QtTextToSpeech.wxs for plugin folder  -->
+    <Fragment>
+        <ComponentGroup Id="CMP_QtTextToSpeechSAPI">
+            <Component Id="cmpf3b89587eb8b44c7a313bb7bcc5dd2a6" Directory="dirf48b023c136b476d935bb9eab72730e9" Guid="{969ec9a3-d4f8-4946-af96-33f0e573ff77}">
+                <File Id="fil14f45ba499bc446bb636679a3c6703ba" KeyPath="yes" Source="$(var.sourceDir)\texttospeech\qtexttospeech_sapi.dll" />
+            </Component>
+        </ComponentGroup>
+    </Fragment>
+</Wix>

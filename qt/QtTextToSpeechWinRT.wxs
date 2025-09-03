@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
+    <!-- requires QtTextToSpeech.wxs for plugin folder  -->
+    <Fragment>
+        <ComponentGroup Id="CMP_QtTextToSpeechWinRT">
+            <Component Id="cmpcd1b0cbe62f24ccf8c39c09fe5695d7b" Directory="dirf48b023c136b476d935bb9eab72730e9" Guid="{54c0ae9b-48e9-4216-a3a3-16ccf0c15ad3}">
+                <File Id="fil1d1f7f265d37438e94517e4cb7e7a070" KeyPath="yes" Source="$(var.sourceDir)\texttospeech\qtexttospeech_winrt.dll" />
+            </Component>
+        </ComponentGroup>
+    </Fragment>
+</Wix>
