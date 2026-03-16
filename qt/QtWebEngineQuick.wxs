@@ -3,7 +3,9 @@
     <Fragment>
         <!-- APPLICATIONFOLDER/qml -->
         <DirectoryRef Id="dirF8AAB67AB3E544FABDA0079E5CF0EBD6">
-            <Directory Id="dirCB9BF89EA15E4202B0E74E393D197EB3" Name="QtWebEngine" />
+            <Directory Id="dirCB9BF89EA15E4202B0E74E393D197EB3" Name="QtWebEngine">
+                <Directory Id="dir9b3506c1431d4f4fba84156238b03e63" Name="ControlsDelegates" />
+            </Directory>
         </DirectoryRef>
     </Fragment>
     <Fragment>
@@ -16,6 +18,17 @@
             </Component>
             <Component Id="cmp83416DEDD292467EB1F07645BFD54C2C" Directory="dirCB9BF89EA15E4202B0E74E393D197EB3" Guid="{AB5CCC50-A166-4AC4-BD0B-7995A8C90B33}">
                 <File Id="fil6D5B46AAF1A1447796C404BE0BD62672" KeyPath="yes" Source="$(var.sourceDir)\qml\QtWebEngine\qtwebenginequickplugin.dll" />
+            </Component>
+
+            <!-- Controls Delegate -->
+            <Component Id="cmpe33e9aac93d7468fb15adcd704a8da2a" Directory="APPLICATIONFOLDER" Guid="{52d0a974-1f76-4cd6-a0df-be150db49e10}">
+                <File Id="fil34ad979c31d449d9a8d3e45d069fb5b6" KeyPath="yes" Source="$(var.sourceDir)\Qt6WebEngineQuickDelegatesQml.dll" />
+            </Component>
+            <Component Id="cmpa498217ee2c4433f9248c72fd19b2036" Directory="dir9b3506c1431d4f4fba84156238b03e63" Guid="{33695d45-8f34-48d7-aead-f9bff31679a9}">
+                <File Id="filcbd07f430f094a8ea4ebd36d07b33a47" KeyPath="yes" Source="$(var.sourceDir)\qml\QtWebEngine\ControlsDelegates\qmldir" />
+            </Component>
+            <Component Id="cmp1a174f48a7fb438c85a0b02230b36f84" Directory="dir9b3506c1431d4f4fba84156238b03e63" Guid="{43dbdae7-08ba-4306-a494-a4fe90439ad6}">
+                <File Id="fil33ad401108024bc8a98002617edabe74" KeyPath="yes" Source="$(var.sourceDir)\qml\QtWebEngine\ControlsDelegates\qtwebenginequickdelegatesplugin.dll" />
             </Component>
         </ComponentGroup>
 
