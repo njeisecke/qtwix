@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
+    <Fragment>
+        <DirectoryRef Id="dirfb3e0947d3eb4b28bc06cf3dbea81006"> <!-- labs -->
+            <Directory Id="dir47f8fe6afc454d0cbffccf921b09adc0" Name="synchronizer" />
+        </DirectoryRef>
+    </Fragment>
+
+    <Fragment>
+        <ComponentGroup Id="CMP_QtLabsSynchronizer">
+            <Component Id="cmpb0a8ba8bd5574a91ad754e1453eff96c" Directory="APPLICATIONFOLDER" Guid="{1686502e-30e7-41cb-a4aa-835a1d9744e0}">
+                <File Id="fild983030e513e4cc6af4d2c891172a693" KeyPath="yes" Source="$(var.sourceDir)\Qt6LabsSynchronizer.dll" />
+            </Component>
+            <Component Id="cmpbf05346fe8d6410f815f22dcf0f845e7" Directory="dir47f8fe6afc454d0cbffccf921b09adc0" Guid="{0c9cc8bb-23b0-4e5f-9d8b-773db87faa77}">
+                <File Id="fil0e3256221c9248918783c39cfc4aa01e" KeyPath="yes" Source="$(var.sourceDir)\qml\Qt\labs\synchronizer\qmldir" />
+            </Component>
+            <Component Id="cmp8ea99e922f4d452080d3af8fddc65e43" Directory="dir47f8fe6afc454d0cbffccf921b09adc0" Guid="{47f8fe6a-fc45-4d0c-bffc-cf921b09adc0}">
+                <File Id="filbf05346fe8d6410f815f22dcf0f845e7" KeyPath="yes" Source="$(var.sourceDir)\qml\Qt\labs\synchronizer\labssynchronizerplugin.dll" />
+            </Component>
+        </ComponentGroup>
+    </Fragment>
+</Wix>
