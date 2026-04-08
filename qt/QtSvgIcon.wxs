@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
+    <Fragment>
+        <DirectoryRef Id="APPLICATIONFOLDER">
+            <Directory Id="dir8f31dad91602464fbad3e24fc696b6f2" Name="iconengines" />
+        </DirectoryRef>
+    </Fragment>
+
+    <Fragment>
+        <ComponentGroup Id="CMP_QtSvgIcon">
+            <Component Id="cmpfff9378464c04028a7e4810be151e9c0" Directory="dir8f31dad91602464fbad3e24fc696b6f2" Guid="{5356a5bc-d888-4d69-9f05-a3b64f98a58c}">
+                <File Id="fil93ee234c0b9b4de89e09dead597f1f4f" KeyPath="yes" Source="$(var.sourceDir)\iconengines\qsvgicon.dll" />
+            </Component>
+        </ComponentGroup>
+    </Fragment>
+</Wix>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
+    <Fragment>
+        <ComponentGroup Id="CMP_QtSvgImageFormat">
+            <Component Id="cmp979ad5db921b4fbeb371dd30c672599c" Directory="APPLICATIONFOLDER" Guid="{30d6e5a2-0d20-4729-b8da-49c5b3babf0d}">
+                <File Id="fil5926cca6aeae455a80e76cfadd61514d" KeyPath="yes" Source="$(var.sourceDir)\Qt6Svg.dll" />
+            </Component>
+            <Component Id="cmp8526f05979904fbfa6fbe3b9a5c867ff" Directory="dir0FDF925E77C53A61CED809EF64CFB5C0" Guid="{4b8d93ae-f8ef-4adb-a82a-c94f18ce3dda}">
+                <File Id="filaa770aa46298ba7880a8d03d6b8ef5a" KeyPath="yes" Source="$(var.sourceDir)\imageformats\qsvg.dll" />
+            </Component>
+        </ComponentGroup>
+    </Fragment>
+</Wix>
