@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
+    <Fragment>
+        <DirectoryRef Id="dirfb3e0947d3eb4b28bc06cf3dbea81006"> <!-- labs -->
+            <Directory Id="dir9c527ec131434d81a119f41fc101437d" Name="qmlmodels" />
+        </DirectoryRef>
+    </Fragment>
+
+    <Fragment>
+        <ComponentGroup Id="CMP_QtQuickLabsQmlModels">
+            <Component Id="cmpeb2ef32f1f224ac494d2bfe02c42da9f" Directory="APPLICATIONFOLDER" Guid="{2A91B5A0-68CE-4B32-A58B-DC2D7350D349}">
+                <File Id="fil0422a41dbe204276b0bcde2abdb39df3" KeyPath="yes" Source="$(var.sourceDir)\Qt6LabsQmlModels.dll" />
+            </Component>
+            <Component Id="cmp12646d2bda894c7b964fcb5c797b7dce" Directory="dir9c527ec131434d81a119f41fc101437d" Guid="{85FEF53E-CAF1-4CE0-9C33-1AF606F99DB8}">
+                <File Id="fil12491e65acf4436ea2334816787be388" KeyPath="yes" Source="$(var.sourceDir)\qml\Qt\labs\qmlmodels\qmldir" />
+            </Component>
+            <Component Id="cmp331da12be4804f81a66259668384ae97" Directory="dir9c527ec131434d81a119f41fc101437d" Guid="{72EAA788-8F77-4FEF-88B6-ECA85AE90238}">
+                <File Id="fil6a17a89a81714bca96f6d32bccb3f146" KeyPath="yes" Source="$(var.sourceDir)\qml\Qt\labs\qmlmodels\labsmodelsplugin.dll" />
+            </Component>
+        </ComponentGroup>
+    </Fragment>
+</Wix>
